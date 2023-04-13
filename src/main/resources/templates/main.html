@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Main</title>
 </head>
 
 <body>
-    <h2>Hello Blue Indus.</h2>
-    <a href="/member/save">사용자등록</a>
-    <a href="/member/login">로그인</a>
-    <a href="/member/">인사목록</a>
+    session 값 확인: <p th:text="${session.loginUid}"></p>
 </body>
 
 </html>

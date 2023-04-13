@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list</title>
+</head>
+
+<body>
+    <h2>sy_user</h2>
+    <table>
+        <tr>
+            <th>사업장</th>
+            <th>사번</th>
+            <th>이름</th>
+            <th>생년월일</th>
+            <th>등급</th>
+            <th>아이디</th>
+            <th>비밀번호</th>
+        </tr>
+        <tr th:each="member: ${memberList}">
+            <td th:text="${member.i_field}"></td>
+            <td th:text="${member.i_empno}"></td>
+            <td th:text="${member.n_hname}"></td>
+            <td th:text="${member.d_birth}"></td>
+            <td th:text="${member.grade}"></td>
+            <td th:text="${member.uid}"></td>
+            <td th:text="${member.emp_pass}"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
